@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost/nov19",
+    "patient": "pat_628",
+    "doctor": "doc_002",
+    "other_patient": "pat_133"
+}

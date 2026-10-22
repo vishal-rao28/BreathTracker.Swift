@@ -1,0 +1,244 @@
+.profile-container-ios {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    min-height: 100vh;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Hero Banner */
+.hero-banner-ios {
+    position: relative;
+    height: 220px;
+    background: linear-gradient(135deg, #1a6b8a 0%, #34C98A 100%);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+}
+
+.banner-gradient {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.circle-overlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.circle-overlay.o1 {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    right: -50px;
+}
+
+.circle-overlay.o2 {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.banner-content-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.avatar-circle-main {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(26, 107, 138, 0.3);
+    border: 3px solid white;
+}
+
+.avatar-initials {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a6b8a;
+    letter-spacing: -1px;
+}
+
+.user-hero-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.id-capsule {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Content Area */
+.profile-scroll-p {
+    padding: 24px;
+}
+
+.section-title-ios-p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #8E8E93;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-left: 4px;
+}
+
+/* Info Grid */
+.info-grid-ios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.profile-card-mini {
+    background: white;
+    border-radius: 18px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s;
+}
+
+.profile-card-mini:hover {
+    transform: translateY(-4px);
+}
+
+.card-icon-p {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange .card-icon-p {
+    background: rgba(255, 155, 66, 0.12);
+    color: #FF9B42;
+}
+
+.purple .card-icon-p {
+    background: rgba(123, 108, 246, 0.12);
+    color: #7B6CF6;
+}
+
+.green .card-icon-p {
+    background: rgba(52, 201, 138, 0.12);
+    color: #34C98A;
+}
+
+.blue .card-icon-p {
+    background: rgba(26, 107, 138, 0.12);
+    color: #1a6b8a;
+}
+
+.card-labels-p {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.p-label {
+    font-size: 11px;
+    color: #8E8E93;
+    font-weight: 500;
+}
+
+.p-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1c1e;
+}
+
+/* Link Rows */
+.link-rows-ios {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.link-row-item {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.link-row-item:active {
+    background: #f2f2f7;
+}
+
+.link-icon-bg {
+    width: 36px;
+    height: 36px;
+    background: rgba(26, 107, 138, 0.1);
+    color: #1a6b8a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-row-item span {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1c1c1e;
+}
+
+.chevron {
+    color: #C7C7CC;
+}
+
+/* Sign Out */
+.sign-out-btn-ios {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255, 59, 48, 0.08);
+    color: #FF3B30;
+    border: 1px solid rgba(255, 59, 48, 0.15);
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 100px;
+}
+
+.sign-out-btn-ios:active {
+    background: rgba(255, 59, 48, 0.12);
+    transform: scale(0.98);
+}

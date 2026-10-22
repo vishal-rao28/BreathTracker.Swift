@@ -1,0 +1,213 @@
+.rehab-view {
+    padding: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.rehab-scroll-area {
+    padding-top: 24px;
+}
+
+/* Categories */
+.category-row-premium {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 24px;
+    scrollbar-width: none;
+}
+
+.category-row-premium::-webkit-scrollbar {
+    display: none;
+}
+
+.p-cat-chip {
+    padding: 10px 24px;
+    background: white;
+    border: 1px solid var(--bt-border);
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--bt-text-second);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.p-cat-chip.active {
+    background: var(--bt-primary);
+    color: white;
+    border-color: var(--bt-primary);
+    box-shadow: 0 4px 12px rgba(26, 107, 138, 0.2);
+}
+
+/* Video List */
+.video-list-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.video-card-premium {
+    background: white;
+    border: 1px solid var(--bt-border);
+    border-radius: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.video-card-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.video-preview-box {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.video-preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.video-card-premium:hover .video-preview-box img {
+    transform: scale(1.05);
+}
+
+.play-button-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.video-card-premium:hover .play-button-overlay {
+    opacity: 1;
+}
+
+.video-duration-pill {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.video-details-p {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.v-main-info h3 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.v-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--bt-text-tertiary);
+    font-weight: 500;
+}
+
+.v-brand {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-save-p {
+    background: var(--bt-background);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bt-text-tertiary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-save-p:hover {
+    background: var(--bt-primary-light);
+    color: var(--bt-primary);
+}
+
+/* Loading & Empty */
+.rehab-loading-state {
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: var(--bt-text-second);
+}
+
+.loader-ios {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--bt-background);
+    border-top-color: var(--bt-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.empty-rehab-p {
+    padding: 100px 0;
+    text-align: center;
+    background: white;
+    border-radius: 40px;
+    border: 2px dashed var(--bt-border);
+}
+
+.empty-circle-p {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+.empty-rehab-p h3 {
+    font: var(--font-title3);
+    margin-bottom: 8px;
+}
+
+.empty-rehab-p p {
+    color: var(--bt-text-tertiary);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .video-list-premium {
+        grid-template-columns: 1fr;
+    }
+}

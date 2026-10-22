@@ -1,0 +1,217 @@
+[
+  {
+    "path": "/update_appointment_status.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/patient_login.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/patient_forgot_password.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/submit_questionnaires.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/verify_patient.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_inhaler_history.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/login.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/save_patient_review.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/save_medication_diary.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/mark_inhaler_taken.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/submit_pft.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/appointment_form.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_patient_profile.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/get_medication_diary.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_checkup.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/submit_abg.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/register.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_questionnaires.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/recover_patient_id.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/fetch_appointments.php",
+    "method": "GET",
+    "expected_role": "public"
+  },
+  {
+    "path": "/update_patient_status.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/get_appointment.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/fetch_patient_details.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/doctor_login.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/patient_signup.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/uploadvideo.php",
+    "method": "POST/GET",
+    "expected_role": "public"
+  },
+  {
+    "path": "/submit_appointment.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/save_checkup.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/submit_six_min_walk.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/get_my_copd.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/save_questionnaire.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/video.php",
+    "method": "POST/GET",
+    "expected_role": "public"
+  },
+  {
+    "path": "/fetch_doctor_patients.php",
+    "method": "POST",
+    "expected_role": "doctor"
+  },
+  {
+    "path": "/get_pft.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_doctor_profile.php",
+    "method": "POST",
+    "expected_role": "doctor"
+  },
+  {
+    "path": "/get_abg.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_medical_reports.php",
+    "method": "POST",
+    "expected_role": "public"
+  },
+  {
+    "path": "/get_patient_details.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/upload_video.php",
+    "method": "POST/GET",
+    "expected_role": "public"
+  },
+  {
+    "path": "/save_vaccine_dates.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/save_copd_questionnaire.php",
+    "method": "POST",
+    "expected_role": "patient"
+  },
+  {
+    "path": "/get_patients.php",
+    "method": "POST",
+    "expected_role": "doctor"
+  },
+  {
+    "path": "/doctor_signup.php",
+    "method": "POST",
+    "expected_role": "public"
+  }
+]

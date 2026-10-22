@@ -1,0 +1,337 @@
+.rep-container {
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.rep-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.rep-back-btn {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    color: var(--bt-text-primary);
+}
+
+.rep-header h1 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+/* Hero Card */
+.rep-hero-card {
+    background: white;
+    padding: 28px;
+    border-radius: 28px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 32px;
+}
+
+.rep-hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.rep-hero-patient h2 {
+    font: var(--font-title);
+    color: var(--bt-text-primary);
+    margin-bottom: 4px;
+}
+
+.rep-hero-patient p {
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+}
+
+.rep-hero-score {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.score-val {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--bt-doctor-primary);
+    line-height: 1;
+}
+
+.score-cat {
+    font: var(--font-caption2);
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.rep-hero-divider {
+    height: 1px;
+    background: #F1F5F9;
+    margin-bottom: 20px;
+}
+
+.rep-hero-grid {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 24px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-label {
+    font: var(--font-caption);
+    color: var(--bt-text-second);
+}
+
+.stat-val {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.rep-diagnosis {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.diag-label {
+    font: var(--font-caption2);
+    color: var(--bt-text-second);
+}
+
+.diag-val {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+/* Sections */
+.rep-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font: var(--font-title2);
+    font-size: 20px;
+    color: var(--bt-text-primary);
+    margin-bottom: 16px;
+    padding-left: 4px;
+}
+
+/* Vitals */
+.rep-vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.vital-badge {
+    background: white;
+    padding: 20px 12px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    box-shadow: var(--shadow-card);
+}
+
+.vital-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.vital-badge.orange .vital-icon {
+    background: rgba(255, 155, 66, 0.1);
+    color: var(--bt-accent-orange);
+}
+
+.vital-badge.blue .vital-icon {
+    background: rgba(91, 76, 245, 0.1);
+    color: var(--bt-doctor-primary);
+}
+
+.vital-badge.purple .vital-icon {
+    background: rgba(123, 108, 246, 0.1);
+    color: var(--bt-accent-purple);
+}
+
+.vital-val {
+    font: var(--font-label);
+    font-size: 16px;
+    color: var(--bt-text-primary);
+}
+
+.vital-label {
+    font: var(--font-caption2);
+    color: var(--bt-text-second);
+}
+
+/* Vaccine Record */
+.rep-vaccine-card {
+    background: white;
+    padding: 16px 20px;
+    border-radius: 22px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+}
+
+.vaccine-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.v-name {
+    font: var(--font-body-medium);
+    color: var(--bt-text-primary);
+}
+
+.v-date {
+    font: var(--font-label);
+    color: var(--bt-accent-green);
+}
+
+.v-date.not-taken {
+    color: var(--bt-text-tertiary);
+}
+
+/* Questionnaire */
+.rep-q-card {
+    background: white;
+    border-radius: 22px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.q-header {
+    background: #F8FAFC;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F1F5F9;
+    font: var(--font-headline);
+    font-size: 14px;
+    color: var(--bt-text-primary);
+}
+
+.col-q {
+    flex: 1;
+}
+
+.col-a {
+    width: 140px;
+    text-align: right;
+}
+
+.q-row {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.q-row:last-child {
+    border-bottom: none;
+}
+
+.row-q {
+    flex: 1;
+    font: var(--font-body);
+    font-size: 14px;
+    color: var(--bt-text-second);
+    line-height: 1.5;
+    padding-right: 20px;
+}
+
+.row-a {
+    width: 160px;
+    text-align: right;
+    font: var(--font-body-medium);
+    font-size: 14px;
+    color: var(--bt-text-primary);
+}
+
+.q-footer {
+    background: rgba(91, 76, 245, 0.05);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-label {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.footer-val {
+    font: var(--font-headline);
+    color: var(--bt-doctor-primary);
+}
+
+/* Loading */
+.rep-loading {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bt-text-second);
+    gap: 16px;
+}
+
+.rep-loading .spinner {
+    color: var(--bt-doctor-primary);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .rep-container {
+        padding: 16px;
+    }
+
+    .rep-hero-grid {
+        gap: 20px;
+    }
+
+    .rep-vitals-grid {
+        gap: 10px;
+    }
+
+    .vital-badge {
+        padding: 16px 8px;
+    }
+}

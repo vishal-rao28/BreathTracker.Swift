@@ -1,0 +1,224 @@
+.pl-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.pl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    gap: 24px;
+}
+
+.pl-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(91, 76, 245, 0.1);
+    color: var(--bt-doctor-primary);
+    padding: 6px 12px;
+    border-radius: 99px;
+    font: var(--font-caption2);
+    font-weight: 700;
+    margin-bottom: 12px;
+    width: fit-content;
+}
+
+.pl-title-section h1 {
+    font: var(--font-large-title);
+    color: var(--bt-text-primary);
+    margin-bottom: 4px;
+    letter-spacing: -1px;
+}
+
+.pl-title-section p {
+    font: var(--font-body);
+    color: var(--bt-text-second);
+}
+
+.pl-search-wrapper {
+    position: relative;
+    width: 320px;
+}
+
+.pl-search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bt-text-tertiary);
+}
+
+.pl-search-wrapper input {
+    width: 100%;
+    height: 48px;
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 0 16px 0 48px;
+    font: var(--font-body);
+    color: var(--bt-text-primary);
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.pl-search-wrapper input:focus {
+    outline: none;
+    border-color: var(--bt-doctor-primary);
+    box-shadow: 0 8px 12px -1px rgba(91, 76, 245, 0.1);
+}
+
+.pl-loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    color: var(--bt-text-second);
+    gap: 16px;
+}
+
+.pl-spinner {
+    color: var(--bt-doctor-primary);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pl-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pl-card {
+    background: white;
+    border: 1px solid #F1F5F9;
+    border-radius: 20px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pl-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    border-color: #E2E8F0;
+}
+
+.pl-card-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.pl-avatar {
+    width: 52px;
+    height: 52px;
+    background: var(--bt-doctor-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.pl-info h3 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+
+.pl-meta {
+    display: flex;
+    gap: 12px;
+}
+
+.pl-tag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pl-tag span {
+    font: var(--font-caption2);
+    color: var(--bt-text-second);
+    font-weight: 600;
+}
+
+.pl-tag.diagnosis {
+    color: var(--bt-accent-orange);
+}
+
+.pl-tag.age {
+    color: var(--bt-doctor-primary);
+}
+
+.pl-card-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pl-id {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bt-text-tertiary);
+    background: #F8FAFC;
+    padding: 4px 10px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+}
+
+.pl-chevron {
+    color: var(--bt-text-tertiary);
+}
+
+.pl-empty-state {
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--bt-text-second);
+}
+
+.pl-empty-icon {
+    width: 80px;
+    height: 80px;
+    background: #F1F5F9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--bt-text-tertiary);
+}
+
+.pl-empty-state h3 {
+    font: var(--font-title3);
+    color: var(--bt-text-primary);
+    margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    .pl-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pl-search-wrapper {
+        width: 100%;
+    }
+}

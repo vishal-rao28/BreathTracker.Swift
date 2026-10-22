@@ -1,0 +1,251 @@
+.pft-container {
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.pft-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.pft-back-btn {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    color: var(--bt-text-primary);
+}
+
+.pft-header h1 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.pft-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font: var(--font-caption2);
+    color: var(--bt-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    padding-left: 8px;
+}
+
+/* Upload Card */
+.pft-upload-card {
+    background: var(--bt-surface);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all 0.2s;
+}
+
+.pft-upload-label {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.pft-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.pft-upload-placeholder {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(91, 76, 245, 0.3);
+    border-radius: 22px;
+    margin: 2px;
+}
+
+.pft-upload-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(91, 76, 245, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bt-doctor-primary);
+    margin-bottom: 12px;
+}
+
+.pft-upload-text {
+    font: var(--font-label);
+    color: var(--bt-doctor-primary);
+    margin-bottom: 4px;
+}
+
+.pft-upload-subtext {
+    font: var(--font-caption2);
+    color: var(--bt-text-second);
+}
+
+/* Severity List & Horizontal Segmented Control */
+.pft-severity-list {
+    background: var(--bt-surface);
+    border-radius: 22px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.pft-severity-list.horizontal {
+    padding: 8px;
+}
+
+.pft-segmented-control {
+    display: flex;
+    background: var(--bt-background);
+    padding: 4px;
+    border-radius: 14px;
+    gap: 4px;
+}
+
+.pft-segment {
+    flex: 1;
+    height: 44px;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pft-segment.active {
+    background: var(--bt-doctor-primary);
+    color: white;
+    box-shadow: 0 4px 10px rgba(91, 76, 245, 0.2);
+}
+
+.pft-severity-row {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.pft-severity-row:last-child {
+    border-bottom: none;
+}
+
+.pft-severity-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pft-severity-label {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.pft-chips {
+    display: flex;
+    gap: 8px;
+}
+
+.pft-chip {
+    width: 60px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: none;
+    font: var(--font-caption);
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--bt-background);
+    color: var(--bt-text-second);
+    transition: all 0.2s;
+}
+
+.pft-chip.active {
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pft-chip.active-no {
+    background: var(--bt-text-tertiary);
+    color: white;
+}
+
+/* Comments */
+.pft-comments {
+    width: 100%;
+    min-height: 120px;
+    background: white;
+    border: none;
+    border-radius: 18px;
+    padding: 20px;
+    font: var(--font-body-medium);
+    color: var(--bt-text-primary);
+    box-shadow: var(--shadow-card);
+    resize: none;
+}
+
+.pft-comments:focus {
+    outline: 2px solid var(--bt-doctor-primary);
+}
+
+/* Submit Button */
+.pft-submit-btn {
+    width: 100%;
+    height: 56px;
+    background: var(--bt-doctor-gradient);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font: var(--font-headline);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(91, 76, 245, 0.2);
+    margin-bottom: 60px;
+    transition: all 0.2s;
+}
+
+.pft-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.pft-submit-btn .spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .pft-container {
+        padding: 16px;
+    }
+}

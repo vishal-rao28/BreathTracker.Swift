@@ -1,0 +1,140 @@
+.smw-container {
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.smw-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.smw-back-btn {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    color: var(--bt-text-primary);
+}
+
+.smw-header h1 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.smw-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.smw-hero-icon {
+    width: 90px;
+    height: 90px;
+    background: rgba(91, 76, 245, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bt-doctor-primary);
+    margin: 0 auto 20px;
+}
+
+.smw-hero h2 {
+    font: var(--font-title2);
+    color: var(--bt-text-primary);
+    margin-bottom: 8px;
+}
+
+.smw-hero p {
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+}
+
+.smw-section {
+    margin-bottom: 32px;
+}
+
+.smw-card {
+    background: white;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.smw-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: var(--font-caption2);
+    color: var(--bt-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-left: 4px;
+}
+
+.smw-editor {
+    width: 100%;
+    min-height: 200px;
+    background: var(--bt-background);
+    border: 1px solid var(--bt-border);
+    border-radius: 12px;
+    padding: 16px;
+    font: var(--font-body);
+    color: var(--bt-text-primary);
+    resize: none;
+    transition: all 0.2s;
+}
+
+.smw-editor:focus {
+    outline: none;
+    border-color: var(--bt-doctor-primary);
+    background: white;
+}
+
+.smw-submit-btn {
+    width: 100%;
+    height: 56px;
+    background: var(--bt-doctor-gradient);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font: var(--font-headline);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(91, 76, 245, 0.2);
+    margin-bottom: 60px;
+}
+
+.smw-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.smw-submit-btn .spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .smw-container {
+        padding: 16px;
+    }
+}

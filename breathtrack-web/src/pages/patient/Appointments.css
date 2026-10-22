@@ -1,0 +1,241 @@
+/* Booking Form View */
+.booking-form-view {
+    padding: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.form-header {
+    margin-bottom: 32px;
+}
+
+.form-header h1 {
+    font: var(--font-large-title);
+    color: var(--bt-text-primary);
+    margin-bottom: 4px;
+}
+
+.form-header p {
+    font: var(--font-body);
+    color: var(--bt-text-second);
+}
+
+.form-container-premium {
+    padding-bottom: 60px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 32px;
+    align-items: start;
+}
+
+.form-section-ios {
+    background: white;
+    border-radius: 32px;
+    border: 1px solid var(--bt-border);
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-title-ios {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--bt-primary);
+}
+
+.section-title-ios h3 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.input-group-ios {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group-ios input,
+.input-group-ios select,
+.input-group-ios textarea,
+.slot-inputs-ios input {
+    width: 100%;
+    padding: 16px;
+    background: var(--bt-background);
+    border: 1px solid var(--bt-border);
+    border-radius: 16px;
+    font: var(--font-body);
+    transition: all 0.2s;
+}
+
+.input-group-ios input:focus,
+.input-group-ios select:focus,
+.input-group-ios textarea:focus {
+    border-color: var(--bt-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(26, 107, 138, 0.05);
+    outline: none;
+}
+
+.row-inputs-ios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.diagnosis-check-ios,
+.symptoms-list-ios,
+.slot-inputs-ios {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.diagnosis-check-ios span,
+.symptoms-list-ios span {
+    font: var(--font-label);
+    color: var(--bt-text-second);
+}
+
+.chip-row-ios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.chip-row-ios button,
+.symptom-grid-ios button {
+    padding: 10px 20px;
+    background: var(--bt-surface2);
+    border: 1px solid var(--bt-border);
+    border-radius: 20px;
+    font: var(--font-caption);
+    font-weight: 600;
+    color: var(--bt-text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chip-row-ios button.active,
+.symptom-grid-ios button.active {
+    background: var(--bt-primary);
+    color: white;
+    border-color: var(--bt-primary);
+}
+
+.symptom-grid-ios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.submit-booking-btn {
+    width: 100%;
+    margin-top: 16px;
+    height: 56px;
+    font-size: 17px !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Success Popup */
+.appt-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+.appt-popup-card {
+    background: white;
+    padding: 40px;
+    border-radius: 32px;
+    width: 90%;
+    max-width: 440px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    animation: slideUpModal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.appt-popup-icon {
+    width: 80px;
+    height: 80px;
+    background: #ecfdf5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+}
+
+.appt-popup-card h2 {
+    font: var(--font-headline);
+    font-size: 24px;
+    color: var(--bt-text-primary);
+    margin-bottom: 12px;
+}
+
+.appt-popup-card p {
+    font: var(--font-body);
+    color: var(--bt-text-second);
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.appt-popup-ok {
+    width: 100%;
+    padding: 16px;
+    background: var(--bt-primary);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font: var(--font-headline);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.appt-popup-ok:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(26, 107, 138, 0.2);
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpModal {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}

@@ -1,0 +1,126 @@
+.doctor-login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+}
+
+.doctor-portal-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.doctor-dot-pattern {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--bt-doctor-primary) 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+}
+
+.doctor-login-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.doctor-card-header {
+    background: linear-gradient(135deg, var(--bt-doctor-primary), #7c3aed);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.doctor-badge-ios {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 99px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.doctor-login-content {
+    padding: 40px;
+}
+
+.doctor-titles {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.doctor-titles h1 {
+    font: var(--font-title1);
+    color: var(--bt-text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.doctor-titles p {
+    font: var(--font-body);
+    color: var(--bt-text-second);
+}
+
+.doctor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.doctor-login-error {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: 1px solid #fee2e2;
+    text-align: center;
+}
+
+.doctor-signin-btn {
+    margin-top: 10px;
+    height: 52px !important;
+    font-size: 16px !important;
+    border-radius: 14px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.doctor-signin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 76, 245, 0.3);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 480px) {
+    .doctor-login-content {
+        padding: 32px 20px;
+    }
+}
+.doctor-banner {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+}
+
+.doctor-overlay {
+    background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20z" fill="rgba(255,255,255,0.03)" fill-rule="evenodd"/></svg>') !important;
+}
+
+.doctor-signin-btn {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+    border: none !important;
+}

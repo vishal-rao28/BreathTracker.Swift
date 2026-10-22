@@ -1,0 +1,259 @@
+.doctor-dashboard-view {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.dashboard-welcome {
+    margin-bottom: 24px;
+}
+
+.dashboard-welcome .welcome-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(91, 76, 245, 0.1);
+    color: var(--bt-doctor-primary);
+    border-radius: 99px;
+    font: var(--font-caption2);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.dashboard-welcome h1 {
+    font: var(--font-large-title);
+    color: var(--bt-text-primary);
+    letter-spacing: -1px;
+}
+
+.doctor-overview-card {
+    background: linear-gradient(135deg, #7B6CF6, #6366F1, #4F46E5);
+    border-radius: 32px;
+    padding: 32px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.card-bg-icon {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    font: var(--font-caption);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.card-main-content h2 {
+    font: var(--font-title);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.card-main-content p {
+    font: var(--font-body);
+    opacity: 0.9;
+    max-width: 450px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.mini-stats-row {
+    display: flex;
+    gap: 16px;
+}
+
+.mini-stat-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 16px 24px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mini-stat-box:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.ms-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ms-icon.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.ms-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.ms-value {
+    font: var(--font-headline);
+    font-size: 18px;
+}
+
+.ms-label {
+    font: var(--font-caption2);
+    opacity: 0.7;
+}
+
+.doctor-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+}
+
+.doctor-grid-layout.single-col {
+    grid-template-columns: 1fr;
+}
+
+.actions-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.section-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: #4F46E5;
+}
+
+.section-header-row h2 {
+    font: var(--font-title3);
+    color: #1E293B;
+}
+
+/* Side Panel */
+.pending-tasks {
+    background: white;
+    border: 1px solid #E2E8F0;
+    padding: 24px;
+    border-radius: 28px;
+    margin-bottom: 24px;
+}
+
+.pending-tasks h3 {
+    font: var(--font-headline);
+    margin-bottom: 20px;
+    color: #1E293B;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 16px;
+    background: #F8FAFC;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.task-item:hover {
+    background: #F1F5F9;
+}
+
+.task-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.task-indicator.warning {
+    background: #F59E0B;
+}
+
+.task-indicator.info {
+    background: #3B82F6;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task-text p {
+    font: var(--font-caption2);
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.task-text span {
+    font: var(--font-caption);
+    color: #64748B;
+}
+
+.assistant-card {
+    background: #1E1B4B;
+    color: white;
+    padding: 32px;
+    border-radius: 28px;
+    text-align: center;
+}
+
+.assistant-card h4 {
+    font: var(--font-title3);
+    margin: 16px 0 8px;
+}
+
+.assistant-card p {
+    font: var(--font-caption);
+    opacity: 0.8;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.assistant-card button {
+    background: #4F46E5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 14px;
+    font: var(--font-headline);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.assistant-card button:hover {
+    background: #4338CA;
+}
+
+@media (max-width: 1100px) {
+    .doctor-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}

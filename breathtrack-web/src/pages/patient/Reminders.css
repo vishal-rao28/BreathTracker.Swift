@@ -1,0 +1,375 @@
+/* ── Reminders Page ─────────────────────────────────────── */
+
+.reminders-page {
+    min-height: 100vh;
+    background: #f4f6fb;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reminders-page.appeared {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header */
+.reminders-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 28px 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.reminders-header-text h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+}
+
+.reminders-header-text p {
+    font-size: 0.82rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.reminders-clear-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(239, 68, 68, 0.08);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ef4444;
+    transition: background 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+
+.reminders-clear-btn:hover {
+    background: rgba(239, 68, 68, 0.16);
+    transform: scale(1.08);
+}
+
+/* Scroll Content */
+.reminders-scroll {
+    padding: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Loading */
+.reminders-loading {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.reminders-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty State */
+.reminders-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 80px 32px;
+    text-align: center;
+}
+
+.empty-icon-circle {
+    width: 96px;
+    height: 96px;
+    background: rgba(59, 130, 246, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reminders-empty h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.reminders-empty p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 0;
+}
+
+/* List */
+.reminders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Section Label */
+.reminders-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 4px;
+    margin-top: 4px;
+}
+
+/* ── Appointment Card ─────────────────────────────────── */
+.reminder-appt-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: white;
+    border-radius: 20px;
+    padding: 18px;
+    border: 1.5px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.reminder-appt-card.rejected {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.reminder-icon-box.appt {
+    background: rgba(16, 185, 129, 0.1) !important;
+}
+
+.reminder-icon-box.rejected-icon {
+    background: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* ── Vaccine Reminder Card ────────────────────────────── */
+.reminder-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: white;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.2s;
+}
+
+.reminder-card.appeared {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.reminder-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon box */
+.reminder-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Info */
+.reminder-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.reminder-info h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reminder-info p {
+    font-size: 0.82rem;
+    color: #6b7280;
+    margin: 0 0 8px;
+    line-height: 1.4;
+}
+
+.reminder-meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    color: #10b981;
+    font-weight: 500;
+}
+
+.reminder-meta span {
+    color: #10b981;
+}
+
+.reminder-meta span.overdue {
+    color: #ef4444;
+}
+
+.reminder-meta span.soon {
+    color: #f59e0b;
+}
+
+/* Cancel button on card */
+.reminder-cancel-btn {
+    width: 30px;
+    height: 30px;
+    background: rgba(239, 68, 68, 0.08);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ef4444;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 2px;
+}
+
+.reminder-cancel-btn:hover {
+    background: rgba(239, 68, 68, 0.16);
+    transform: scale(1.1);
+}
+
+/* ── Clear All Dialog ─────────────────────────────── */
+.reminders-dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+.reminders-dialog {
+    background: white;
+    border-radius: 22px;
+    padding: 28px;
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.reminders-dialog h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 10px;
+}
+
+.reminders-dialog p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0 0 24px;
+    line-height: 1.5;
+}
+
+.reminders-dialog-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.dialog-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dialog-btn.keep {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.dialog-btn.keep:hover {
+    background: #e5e7eb;
+}
+
+.dialog-btn.cancel-all {
+    background: #ef4444;
+    color: white;
+}
+
+.dialog-btn.cancel-all:hover {
+    background: #dc2626;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .reminders-scroll {
+        padding: 16px;
+    }
+
+    .reminders-header {
+        padding: 20px 16px 16px;
+    }
+}

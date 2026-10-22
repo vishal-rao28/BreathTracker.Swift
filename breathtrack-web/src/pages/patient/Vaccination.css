@@ -1,0 +1,542 @@
+/* ── Vaccination Page ───────────────────────────────────────── */
+
+.vaccination-view {
+    min-height: 100vh;
+    background: #f4f6fb;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.vaccination-view.appeared {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header */
+.vacc-page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 24px 16px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.vacc-page-header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.vacc-page-header p {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.vacc-back-btn {
+    background: #f3f4f6;
+    border: none;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #374151;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.vacc-back-btn:hover {
+    background: #e5e7eb;
+}
+
+/* Scroll Area */
+.vacc-scroll-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Intro card */
+.vacc-intro-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.vacc-intro-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.vacc-intro-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+}
+
+.vacc-intro-card p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Vaccine List */
+.vacc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ── Vaccine Card ─────────────────────────────────────── */
+.vacc-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.vacc-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+/* Card Header Row */
+.vacc-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 20px;
+}
+
+.vacc-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vacc-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.vacc-status {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #9ca3af;
+}
+
+.vacc-status.taken {
+    color: #10b981;
+}
+
+/* Toggle switch — matches iOS style */
+.bt-toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.bt-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 30px;
+    transition: background 0.25s;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.25s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bt-toggle input:checked+.toggle-slider {
+    background: #3b82f6;
+}
+
+.bt-toggle input:checked+.toggle-slider::before {
+    transform: translateX(22px);
+}
+
+.bt-toggle.small {
+    width: 40px;
+    height: 24px;
+}
+
+.bt-toggle.small .toggle-slider::before {
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+}
+
+.bt-toggle.small input:checked+.toggle-slider::before {
+    transform: translateX(16px);
+}
+
+/* ── Expanded Section ─────────────────────────────────── */
+.vacc-expanded {
+    border-top: 1px solid #f3f4f6;
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    animation: expandIn 0.3s ease;
+}
+
+@keyframes expandIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Two-column inputs row */
+.vacc-inputs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.vacc-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vacc-input-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.vacc-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #9ca3af;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.vacc-label-icon {
+    font-size: 0.85rem;
+}
+
+.vacc-date-input,
+.vacc-time-input {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: #111827;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.vacc-date-input:focus,
+.vacc-time-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.vacc-time-input.small {
+    width: 110px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* ── Alarm Row ────────────────────────────────────────── */
+.vacc-alarm-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8faff;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: all 0.3s;
+}
+
+.vacc-alarm-row.cancelled {
+    background: #fafafa;
+    border-color: #e5e7eb;
+}
+
+.vacc-alarm-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.vacc-alarm-row.cancelled .vacc-alarm-icon {
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+
+.vacc-alarm-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.vacc-alarm-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.vacc-alarm-row.cancelled .vacc-alarm-title {
+    color: #9ca3af;
+}
+
+.vacc-alarm-sub {
+    font-size: 0.75rem;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vacc-alarm-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.vacc-alarm-btn.cancel {
+    background: transparent;
+    color: #f59e0b;
+}
+
+.vacc-alarm-btn.cancel:hover {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.vacc-alarm-btn.restore {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.vacc-alarm-btn.restore:hover {
+    background: rgba(59, 130, 246, 0.18);
+}
+
+/* ── Shingles Expanded ───────────────────────────────── */
+.shingles-expanded {
+    gap: 16px;
+}
+
+.shingles-dose2-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.shingles-dose2-toggle span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.shingles-alarm-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8faff;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 14px;
+    padding: 14px 16px;
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+.vacc-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 32px;
+}
+
+.vacc-footer-note {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    justify-content: center;
+    margin: 0;
+}
+
+.animate-in {
+    animation: expandIn 0.3s ease;
+}
+
+/* ── Success Popup ─────────────────────────────────── */
+.vacc-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.vacc-popup-card {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.vacc-popup-icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.vacc-popup-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.vacc-popup-card p {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.vacc-popup-ok {
+    width: 100%;
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.vacc-popup-ok:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.vacc-popup-ok:active {
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .vacc-inputs-row {
+        grid-template-columns: 1fr;
+    }
+
+    .vacc-scroll-content {
+        padding: 16px;
+    }
+
+    .vacc-alarm-sub {
+        display: none;
+    }
+}

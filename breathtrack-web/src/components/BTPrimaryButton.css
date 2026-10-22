@@ -1,0 +1,66 @@
+.bt-primary-button {
+    height: 56px;
+    border-radius: var(--radius-button);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: var(--font-label);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-deep);
+    gap: 12px;
+    padding: 0 24px;
+}
+
+.bt-primary-button.teal {
+    background: var(--bt-primary-gradient);
+}
+
+.bt-primary-button.purple {
+    background: var(--bt-doctor-gradient);
+}
+
+.bt-primary-button.outline {
+    background: transparent;
+    border: 2px solid var(--bt-primary);
+    color: var(--bt-primary);
+    box-shadow: none;
+}
+
+.bt-primary-button.full-width {
+    width: 100%;
+}
+
+.bt-primary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bt-btn-inner {
+    color: inherit;
+    font: inherit;
+}

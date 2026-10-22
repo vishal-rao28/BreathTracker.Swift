@@ -1,0 +1,200 @@
+.profile-ios-wrapper {
+    background-color: #F8F9FE;
+    min-height: 100%;
+    padding: 20px;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.profile-ios-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.ios-back-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ios-back-btn:hover {
+    transform: scale(1.05);
+}
+
+.profile-ios-header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.header-spacer {
+    width: 44px;
+}
+
+/* Avatar Section */
+.profile-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.avatar-circle-ios {
+    width: 90px;
+    height: 90px;
+    background: rgba(123, 108, 246, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7B6CF6;
+}
+
+.doc-type-label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Details List */
+.profile-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ios-detail-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s;
+}
+
+.ios-detail-row:hover {
+    transform: translateX(5px);
+}
+
+.row-icon-container {
+    width: 44px;
+    height: 44px;
+    background: rgba(123, 108, 246, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7B6CF6;
+}
+
+.row-icon-container svg {
+    width: 18px;
+    height: 18px;
+}
+
+.row-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.row-label {
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.row-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Loading */
+.profile-loading-ios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.ios-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(123, 108, 246, 0.1);
+    border-top-color: #7B6CF6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ios-edit-btn,
+.ios-save-btn {
+    background: transparent;
+    border: none;
+    color: #7B6CF6;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: opacity 0.2s;
+}
+
+.ios-edit-btn:hover,
+.ios-save-btn:hover {
+    opacity: 0.8;
+}
+
+.ios-profile-input {
+    border: none;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 2px 0;
+    outline: none;
+    background: transparent;
+    width: 250px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.ios-profile-input:focus {
+    border-bottom-color: #7B6CF6;
+}

@@ -1,0 +1,129 @@
+.advice-page-view {
+    padding: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.advice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.back-btn-round {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bt-surface);
+    border: 1px solid var(--bt-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    color: var(--bt-text-primary);
+    transition: all 0.2s;
+}
+
+.back-btn-round:hover {
+    transform: scale(1.05);
+    background: var(--bt-background);
+}
+
+.advice-header h1 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.header-spacer {
+    width: 44px;
+}
+
+.advice-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease-out;
+}
+
+.advice-content.appeared {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.advice-intro {
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.advice-intro h2 {
+    font: var(--font-large-title);
+    font-size: 36px;
+    color: var(--bt-text-primary);
+    margin-bottom: 12px;
+}
+
+.advice-intro p {
+    font: var(--font-body);
+    font-size: 18px;
+    color: var(--bt-text-second);
+    line-height: 1.5;
+}
+
+.advice-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.advice-card-modern {
+    background: var(--bt-surface);
+    padding: 24px;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    border: 1px solid var(--bt-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.card-icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.card-text h3 {
+    font: var(--font-title3);
+    color: var(--bt-text-primary);
+    margin-bottom: 4px;
+}
+
+.card-text p {
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+}
+
+.card-chevron {
+    color: var(--bt-text-tertiary);
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .advice-page-view {
+        padding: 20px;
+    }
+
+    .advice-intro h2 {
+        font-size: 30px;
+    }
+}

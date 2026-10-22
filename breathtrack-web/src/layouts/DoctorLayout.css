@@ -1,0 +1,184 @@
+.doctor-layout {
+    display: flex;
+    height: 100vh;
+    background: #FAFBFF;
+    overflow: hidden;
+}
+
+.doctor-sidebar {
+    width: 260px;
+    background: #1E1B4B;
+    /* Dark indigo */
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    color: white;
+}
+
+.doctor-sidebar .logo-text {
+    color: white;
+    font: var(--font-title3);
+}
+
+.doctor-logo-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #818CF8;
+}
+
+.doctor-sidebar .nav-item {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.doctor-sidebar .nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.doctor-sidebar .nav-item.active {
+    background: #4F46E5;
+    color: white;
+}
+
+.doctor-main-header {
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.doc-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.doc-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.doc-name {
+    font: var(--font-headline);
+    color: #1E293B;
+}
+
+.doc-role {
+    font: var(--font-caption);
+    color: #64748B;
+}
+
+.doc-avatar {
+    width: 40px;
+    height: 40px;
+    background: #EEF2FF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4F46E5;
+}
+
+.doctor-main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.doctor-layout .content-scroll {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.current-view {
+    font: var(--font-label);
+    color: #64748B;
+}
+
+/* Notification Bell Styles */
+.notification-bell {
+    position: relative;
+    padding: 8px;
+    border-radius: 12px;
+    background: #F8FAFC;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-bell.has-pending {
+    background: rgba(79, 70, 229, 0.08);
+}
+
+.notification-bell.has-pending svg {
+    animation: bell-ring 2.5s ease-in-out infinite;
+}
+
+.notification-bell .badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #EF4444;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+@keyframes bell-ring {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    5% {
+        transform: rotate(15deg);
+    }
+
+    10% {
+        transform: rotate(-12deg);
+    }
+
+    15% {
+        transform: rotate(10deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    25% {
+        transform: rotate(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .doctor-sidebar {
+        display: none;
+    }
+}

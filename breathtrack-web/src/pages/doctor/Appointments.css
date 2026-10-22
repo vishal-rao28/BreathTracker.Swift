@@ -1,0 +1,321 @@
+.appt-page-container {
+    padding: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.appt-header {
+    margin-bottom: 32px;
+}
+
+.appt-header-content h1 {
+    font: var(--font-title);
+    color: var(--bt-text-primary);
+    margin-bottom: 4px;
+}
+
+.appt-header-content p {
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+}
+
+/* Controls */
+.appt-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.appt-search-wrapper {
+    position: relative;
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--shadow-card);
+    transition: all 0.2s;
+}
+
+.appt-search-wrapper:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bt-text-tertiary);
+}
+
+.appt-search-wrapper input {
+    width: 100%;
+    padding: 18px 20px 18px 56px;
+    border: none;
+    background: transparent;
+    font: var(--font-body-medium);
+    color: var(--bt-text-primary);
+    border-radius: 18px;
+}
+
+.appt-search-wrapper input:focus {
+    outline: none;
+}
+
+.appt-segmented-control {
+    display: flex;
+    background: #EDF2F7;
+    padding: 6px;
+    border-radius: 16px;
+    gap: 6px;
+}
+
+.appt-segment {
+    flex: 1;
+    height: 48px;
+    border: none;
+    background: transparent;
+    border-radius: 12px;
+    font: var(--font-headline);
+    font-size: 14px;
+    color: var(--bt-text-second);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.appt-segment.active {
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* List & Cards */
+.appt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appt-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.appt-card {
+    background: white;
+    border-radius: 22px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.appt-card:hover {
+    transform: scale(1.01);
+}
+
+.appt-card-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.appt-date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+}
+
+.appt-date-block .day {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--bt-text-primary);
+    line-height: 1;
+}
+
+.appt-date-block .month {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--bt-text-tertiary);
+    letter-spacing: 0.5px;
+}
+
+.appt-divider {
+    width: 1px;
+    height: 40px;
+    background: #F1F5F9;
+}
+
+.appt-info {
+    flex: 1;
+}
+
+.appt-patient-name {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.appt-patient-name h4 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.appt-patient-name .time {
+    font: var(--font-caption);
+    font-weight: 700;
+    color: var(--bt-doctor-primary);
+}
+
+.appt-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font: var(--font-caption2);
+    color: var(--bt-text-tertiary);
+}
+
+.mode-badge {
+    font-size: 10px;
+    font-weight: 700;
+    background: rgba(52, 201, 138, 0.1);
+    color: var(--bt-accent-green);
+    padding: 3px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.appt-card.pending .mode-badge {
+    background: rgba(123, 108, 246, 0.1);
+    color: var(--bt-accent-purple);
+}
+
+.appt-card.rejected .mode-badge {
+    background: rgba(255, 155, 66, 0.1);
+    color: var(--bt-accent-orange);
+}
+
+/* Actions */
+.appt-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn.accept {
+    background: rgba(52, 201, 138, 0.1);
+    color: var(--bt-accent-green);
+}
+
+.action-btn.reject {
+    background: rgba(255, 155, 66, 0.1);
+    color: var(--bt-accent-orange);
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.chevron {
+    color: var(--bt-text-tertiary);
+}
+
+/* Tray */
+.appt-symptoms-tray {
+    background: #F8FAFC;
+    margin: 0 24px;
+    padding: 12px 20px;
+    border-radius: 0 0 16px 16px;
+    font-size: 13px;
+    color: var(--bt-text-second);
+    border: 1px solid #F1F5F9;
+    border-top: none;
+}
+
+/* Empty State */
+.appt-empty {
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.appt-empty h3 {
+    font: var(--font-title2);
+    color: var(--bt-text-primary);
+    margin-bottom: 8px;
+}
+
+.appt-empty p {
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+}
+
+.appt-loading {
+    padding: 100px 0;
+    text-align: center;
+    color: var(--bt-text-second);
+}
+
+.appt-loading .spinner {
+    color: var(--bt-doctor-primary);
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .appt-page-container {
+        padding: 16px;
+    }
+
+    .appt-card {
+        padding: 16px;
+    }
+
+    .appt-card-left {
+        gap: 16px;
+    }
+}

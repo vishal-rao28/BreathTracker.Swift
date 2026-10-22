@@ -1,0 +1,262 @@
+.analysis-detail-view {
+    padding: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.analysis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.analysis-header h1 {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.analysis-scroll-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* Profile Summary Card */
+.analysis-summary-card {
+    background: var(--bt-surface);
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--bt-border);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.p-info h2 {
+    font: var(--font-title2);
+    margin-bottom: 4px;
+    color: var(--bt-text-primary);
+}
+
+.p-info span {
+    font: var(--font-body-medium);
+    color: var(--bt-text-second);
+}
+
+.score-badge-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.score-val {
+    font: var(--font-large-title);
+    font-size: 36px;
+    color: var(--bt-primary);
+    font-weight: 800;
+}
+
+.cat-label {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font: var(--font-caption2);
+    font-weight: 700;
+}
+
+.cat-label.low {
+    background: rgba(52, 201, 138, 0.15);
+    color: var(--bt-accent-green);
+}
+
+.cat-label.moderate {
+    background: rgba(255, 155, 66, 0.15);
+    color: var(--bt-accent-orange);
+}
+
+.cat-label.high {
+    background: rgba(229, 62, 62, 0.15);
+    color: #E53E3E;
+}
+
+.card-divider {
+    height: 1px;
+    background: var(--bt-border);
+}
+
+.card-metrics {
+    display: flex;
+    gap: 40px;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metric .label,
+.card-diagnosis .label {
+    font: var(--font-caption2);
+    color: var(--bt-text-second);
+}
+
+.metric .val,
+.card-diagnosis .val {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+/* Vitals Block */
+.vitals-block h3,
+.vaccine-block h3,
+.questionnaire-block h3 {
+    font: var(--font-title3);
+    color: var(--bt-text-primary);
+    margin-bottom: 16px;
+}
+
+.vitals-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vital-mini {
+    background: var(--bt-surface);
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--bt-border);
+}
+
+.v-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.v-icon.orange {
+    background: rgba(255, 155, 66, 0.12);
+    color: var(--bt-accent-orange);
+}
+
+.v-icon.blue {
+    background: rgba(26, 107, 138, 0.12);
+    color: var(--bt-primary);
+}
+
+.v-icon.purple {
+    background: rgba(123, 108, 246, 0.12);
+    color: var(--bt-accent-purple);
+}
+
+.v-val {
+    font: var(--font-headline);
+    color: var(--bt-text-primary);
+}
+
+.v-label {
+    font: var(--font-caption2);
+    color: var(--bt-text-second);
+}
+
+/* Box Lists */
+.white-box-list {
+    background: var(--bt-surface);
+    border-radius: 28px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--bt-border);
+}
+
+.vax-row,
+.q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--bt-border);
+}
+
+.vax-row:last-child,
+.q-row:last-child {
+    border-bottom: none;
+}
+
+.vax-name,
+.q-text {
+    font: var(--font-body-medium);
+    color: var(--bt-text-primary);
+}
+
+.vax-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font: var(--font-label);
+}
+
+.vax-status.ready {
+    color: var(--bt-accent-green);
+}
+
+.vax-status.missing {
+    color: var(--bt-text-tertiary);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--bt-border);
+    font: var(--font-label);
+    color: var(--bt-text-primary);
+}
+
+.a-col {
+    width: 150px;
+    text-align: left;
+}
+
+.q-ans {
+    width: 150px;
+    font: var(--font-label);
+    color: var(--bt-text-primary);
+}
+
+.q-text {
+    flex: 1;
+    color: var(--bt-text-second);
+    margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+    .vitals-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-metrics {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
